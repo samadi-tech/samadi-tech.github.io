@@ -67,10 +67,10 @@ function changeSlide() {
 }
 function reset() {
   clearInterval(timer);
-  timer = setInterval(autoPlay, 5000);
+  timer = setInterval(autoPlay, 7000);
 }
 function autoPlay() {
   nextSlide();
   updateIndicator();
 }
-let timer = setInterval(autoPlay, 5000);
+let timer = setInterval(autoPlay, 7000);
