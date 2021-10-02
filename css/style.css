@@ -118,11 +118,11 @@ body {
   transition: 1s;
 }
 .menu-nav .caption {
-  padding-top: 0.5rem;
+  padding: 0.5rem;
   text-align: center;
 }
 .menu-nav.active {
-  height: 250px;
+  height: auto;
 }
 
 .menu-nav li {
