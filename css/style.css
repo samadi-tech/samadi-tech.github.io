@@ -1,7 +1,7 @@
 /* Created By: Samadi-Tech */
 
 /* Font Google */
-
+@import url("https://fonts.googleapis.com/css2?family=Birthstone&family=Stint+Ultra+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;700&display=swap");
 
 :root {
@@ -107,34 +107,27 @@ body {
   color: var(--blue);
 }
 .menu-nav {
-  display: none;
   position: absolute;
-  top: 7vh;
+  top: 8vh;
   left: 0;
   background-color: var(--white);
-  padding: 0 0 2em 2em;
+  overflow: hidden;
   width: 100%;
+  height: 0px;
   box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
+  transition: 1s;
 }
 .menu-nav .caption {
   padding-top: 0.5rem;
   text-align: center;
 }
 .menu-nav.active {
-  display: block;
-  animation: navbar ease 1s;
+  height: 220px;
 }
-@keyframes navbar {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
+
 .menu-nav li {
   position: relative;
-  padding: 0.5em;
+  padding: 0.5em 2em;
 }
 .menu-nav li:before {
   width: 0%;
@@ -210,27 +203,36 @@ body {
   .logo-nav {
     width: 40%;
   }
+  .navbar {
+    overflow: hidden;
+  }
   .navbar .menu-nav {
     position: static;
-    justify-content: space-around;
-    background-color: var(--white);
-    padding: 0;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
     box-shadow: none;
+    display: none;
+  }
+  .navbar .menu-nav li {
+    animation: navbarMenu ease 3s;
+    padding: 1em;
   }
   .menu-nav .caption {
     display: none;
   }
   .navbar .menu-nav.active {
     display: flex;
-    animation: navbarMenu ease 1s;
   }
   @keyframes navbarMenu {
     0% {
       opacity: 0;
+      transform: translateX(100%);
     }
     100% {
       opacity: 1;
+      transform: translateX(0%);
     }
   }
 }
@@ -310,7 +312,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2em;
-  padding: 2rem 0;
+  padding: 2rem;
 }
 .container-header .caption h1 {
   opacity: 0;
@@ -455,7 +457,7 @@ body {
 @media (min-width: 768px) {
   .container-header .caption {
     margin-left: 2vw;
-    width: 50%;
+    width: 60%;
     align-items: flex-start;
   }
 }
@@ -473,10 +475,7 @@ body {
   padding: 4rem 0;
   background-color: var(--white);
 }
-.about .container-about {
-  width: 90%;
-  height: 100%;
-  margin: auto;
+.about .tentang {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -633,11 +632,6 @@ body {
   align-items: center;
   flex-wrap: wrap;
   margin: auto;
-}
-.work .container h1 {
-  width: 100%;
-  text-align: center;
-  margin: 2em;
 }
 
 .work .bingkai {
@@ -816,9 +810,13 @@ section .container {
 }
 
 section .judul-section {
+  font-family: "Birthstone", cursive;
+  color: var(--blue);
   text-align: center;
   width: 100%;
-  margin: 2em auto;
+  margin: auto;
+  font-size: 3em;
+  letter-spacing: 0.5rem;
 }
 html {
   scroll-behavior: smooth;

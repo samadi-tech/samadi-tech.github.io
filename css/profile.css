@@ -91,9 +91,12 @@ body {
   z-index: 100;
 }
 .bingkai-profile .icon-profile .icon {
-  font-size: 2em;
+  font-size: 1.7em;
   color: rgb(170, 167, 167);
   cursor: pointer;
+}
+.bingkai-profile .icon-profile .icon:hover {
+  color: var(--black);
 }
 
 /* main */
