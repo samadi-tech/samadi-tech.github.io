@@ -93,6 +93,39 @@ body {
 }
 /* End Preloader */
 
+/* Top */
+#top {
+  background-color: var(--blue);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  color: var(--white);
+  visibility: hidden;
+  font-size: 1.5em;
+  z-index: 1000;
+}
+#top:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#top:active {
+  background-color: #555;
+}
+#top.show {
+  opacity: 1;
+  visibility: visible;
+}
+/* End Top */
+
 /* Sosmed */
 .sosmed {
   width: 100%;
