@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samadi-Tech</title>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -12,15 +14,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <!-- Maincss -->
     <link rel="stylesheet" href="css/style.css" />
+
   </head>
   <body>
+
+    <!-- Prealoader -->
+    <div class="preloader">
+      <div class="loading">
+        <div class="preloader5"></div>
+      </div>
+    </div>
+    <!-- End Preloader -->
+
+    <!--Sosmed  -->
     <section class="sosmed">
       <a href="https://api.whatsapp.com/send?phone=6285865138701"><i class="fab fa-whatsapp icon"></i></a>
       <a href="https://instagram.com/adie1007"><i class="fab fa-instagram icon"></i></i></a>
       <a href="https://www.facebook.com/AdI3.nUgR0h0"><i class="fab fa-facebook icon"></i></a>
-      <a href="https://wwww.linkedin.com/in/adi-nugroho-1007"><i class="fab fa-linkedin icon"></i></a>
-         
+      <a href="https://wwww.linkedin.com/in/adi-nugroho-1007"><i class="fab fa-linkedin icon"></i></a>         
     </section>
+    <!-- End Sssmed -->
+
     <!-- Navbar -->
     <section class="navbar" id="nav">
       <div class="container-navbar">
@@ -35,7 +49,7 @@
           <li><a href="#galery">Gallery</a></li>
           <li><a href="#work">Experience</a></li>
           <li><a href="#pesan">Message</a></li>
-          <div class="caption">Samadi - Tech @adie1007</div>
+          <div class="caption"><span>Samadi - Tech @adie1007</span></div>
         </div>
         <div class="toggle" id="toggle"></div>
       </div>
@@ -249,29 +263,10 @@
     <!-- Main Script -->
     <script src="js/navbar.js"></script>
     <script src="js/slide-header.js"></script>
+    <script src="js/pesan.js"></script>
+    <script src="js/preloader.js"></script>
     <!-- Fontawesome JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
-
-    <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbzIJvx55k-WXfHIDjq_8UEbTb60unEL9Yy3GFjsgFXMnal7apQPK3jye8djcaG2QKoGzw/exec";
-const form = document.forms["samadi-tech-form"];
-
-form.addEventListener("submit", (e) => {
-  const notif = document.querySelector(".notif");
-  notif.classList.toggle("active");
-  console.log(notif);
-
-  e.preventDefault();
-  fetch(scriptURL, { method: "POST", body: new FormData(form) })
-    .then((response) => {
-      console.log("Success!", response);
-      notif.classList.toggle("active");
-      alert("Pesan anda sudah dikirim.");
-      form.reset();
-  })
-    .catch((error) => console.error("Error!", error.message));
-});
-</script>
 
   </body>
     <!-- AOS -->

@@ -25,6 +25,74 @@ body {
   font-family: "Poppins", sans-serif;
   height: auto;
 }
+
+/* Preloader */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #fff;
+}
+.preloader .loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font: 14px arial;
+}
+.preloader5 {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: #058ce6;
+  border-radius: 50px;
+  animation: preloader_5 1.5s infinite linear;
+}
+.preloader5:after {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-top: 10px solid var(--blue);
+  border-bottom: 10px solid var(--blue);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-radius: 50px;
+  content: "";
+  top: -20px;
+  left: -20px;
+  animation: preloader_5_after 1.5s infinite linear;
+}
+@keyframes preloader_5 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    background: #db0634;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes preloader_5_after {
+  0% {
+    border-top: 10px solid var(--blue);
+    border-bottom: 10px solid var(--blue);
+  }
+  50% {
+    border-top: 10px solid #3498db;
+    border-bottom: 10px solid #3498db;
+  }
+  100% {
+    border-top: 10px solid var(--blue);
+    border-bottom: 10px solid var(--blue);
+  }
+}
+/* End Preloader */
+
 /* Sosmed */
 .sosmed {
   width: 100%;
@@ -61,7 +129,6 @@ body {
     font-size: 80%;
   }
 }
-
 /* End-Sosmed */
 
 /* Navbar */
@@ -69,13 +136,13 @@ body {
   position: sticky;
   top: 0;
   left: 0;
-  transition: 0.5s;
+  transition: 1s;
 }
 .navbar {
   width: 100%;
   position: relative;
   box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
-  z-index: 99999;
+  z-index: 999;
 }
 .navbar .container-navbar {
   width: 100%;
@@ -115,14 +182,35 @@ body {
   width: 100%;
   height: 0px;
   box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
-  transition: 1s;
+  transition: 0.5s;
 }
 .menu-nav .caption {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
   padding: 0.5rem;
   text-align: center;
+  animation: captionNav 4s infinite linear;
 }
+@keyframes captionNav {
+  0% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  50% {
+    opacity: 0;
+    transform: rotateY(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(-360deg);
+  }
+}
+
 .menu-nav.active {
-  height: auto;
+  height: 300px;
 }
 
 .menu-nav li {
@@ -216,7 +304,7 @@ body {
     display: none;
   }
   .navbar .menu-nav li {
-    animation: navbarMenu ease 3s;
+    animation: navbarMenu ease 1s;
     padding: 1em;
   }
   .menu-nav .caption {
@@ -519,10 +607,11 @@ body {
   border-radius: 30px;
   z-index: 1000;
   background-color: var(--blue);
+  transition: 0.3s;
 }
 
 .tbl-biru a:hover {
-  color: var(--red);
+  color: var(--black);
 }
 
 /* End About */
