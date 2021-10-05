@@ -1,0 +1,130 @@
+.header-sub h1 {
+  z-index: 5;
+  font-size: 3vmax;
+}
+.container-glr {
+  width: 90%;
+  justify-content: space-evenly;
+  gap: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.item-glr {
+  position: relative;
+  background-color: var(--blue);
+  width: 450px;
+  height: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.item-glr img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.item-glr img:hover {
+  transform: scale(1.1);
+}
+.zoom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #b6bcc5, rgba(150, 154, 156, 0.8));
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  display: none;
+}
+.zoom .bingkai-zoom {
+  width: 650px;
+  height: 450px;
+}
+.zoom .bingkai-zoom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+  animation: zoomImage ease 2s;
+}
+@keyframes zoomImage {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.zoom.active {
+  display: flex;
+  animation: zoom ease 1s;
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.close {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  border-radius: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  border: 2px solid white;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .zoom .bingkai-zoom {
+    width: 70%;
+    height: 350px;
+  }
+}
+
+.prev,
+.next {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 40px;
+  background-color: blue;
+  border-radius: 100%;
+  opacity: 0.3;
+  color: white;
+}
+.prev:hover,
+.next:hover {
+  opacity: 1;
+}
+.prev {
+  position: fixed;
+  top: 50%;
+  left: 4em;
+}
+.next {
+  position: fixed;
+  top: 50%;
+  right: 4em;
+}

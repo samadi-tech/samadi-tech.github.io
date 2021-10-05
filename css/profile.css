@@ -35,7 +35,7 @@ body {
   justify-content: center;
   background-color: var(--white);
 }
-.header-profile::after {
+.header-.header-profile {
   position: absolute;
   top: 0;
   left: 0;
