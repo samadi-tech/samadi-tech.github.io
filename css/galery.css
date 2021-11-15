@@ -147,3 +147,11 @@
   top: 50%;
   right: 4em;
 }
+
+@media (max-width: 880px) {
+  .bingkai-zoom .prev,
+  .bingkai-zoom .next{
+  opacity: 0;
+  display: none;
+}
+}

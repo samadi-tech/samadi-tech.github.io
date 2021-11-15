@@ -3,6 +3,7 @@
 /* Font Google */
 @import url("https://fonts.googleapis.com/css2?family=Birthstone&family=Stint+Ultra+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
 
 :root {
   --blue: #468ff6;
@@ -432,7 +433,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+  gap: 1em;
   padding: 2rem;
 }
 .container-header .caption h1 {
@@ -441,7 +442,7 @@ body {
   font-size: 3em;
   font-weight: 700;
   text-transform: uppercase;
-  text-shadow: 0 4px 3px var(--blue);
+  text-shadow: 0 2px 2px var(--blue);
 }
 
 .header .slide.active .container-header .caption h1 {
@@ -618,9 +619,9 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  line-height: 5em;
 }
 .about-left p {
+  margin-top: 30px;
   color: var(--abu-abu);
   line-height: 2em;
 }
@@ -932,13 +933,31 @@ section .container {
 }
 
 section .judul-section {
-  font-family: "Birthstone", cursive;
-  color: var(--blue);
+  position: relative;
+  font-family: 'Limelight', cursive;
+  color: var(--black);
   text-align: center;
   width: 100%;
   margin: auto;
-  font-size: 3em;
-  letter-spacing: 0.5rem;
+  font-size: 1em;
+  font-size: 1.5em;
+  padding: .5em;
+}
+section .judul-section:hover::before{
+  background-color: blue;
+  width: 80px;
+}
+
+section .judul-section::before{
+  position: absolute;
+  bottom: 0;
+  content: '';
+  width: 40px;
+  height: 3px;
+  text-align: center;
+  background-color: #db0634;
+  transition: .3s;
+  border-radius: 20px;
 }
 html {
   scroll-behavior: smooth;
